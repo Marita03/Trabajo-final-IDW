@@ -105,8 +105,6 @@ Aspectos Negativos:
 Escasa información sobre procesos o autores detrás de los proyectos.
 
 ## ¿Qué existe que puede inspirar la propuesta?
+<img width="781" height="436" alt="Captura de pantalla 2025-11-13 a la(s) 11 41 57" src="https://github.com/user-attachments/assets/93b68943-7d94-4216-8482-15eaf2cce8e5" />
 
 
-
-
-¿Qué existe que puede inspirar la propuesta? → referentes → prepare un moodboard con elementos visuales, distintos de sitios y aplicaciones web, que puedan aportar novedad a su diseño. Ej: https://create.vista.com/es/templates/mood-board/, https://www.canva.com/es_mx/crear/mood-boards/, https://www.freepik.com/blog/es/mood-boards-consejos-trucos-crearlos/, https://www.adobe.com/es/express/create/mood-board
