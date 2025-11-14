@@ -17,6 +17,15 @@ Revisa portafolios para buscar practicantes y nuevos diseñadores. Le interesa d
 #### Necesidades y Objetivos:
 Necesita comprender en pocos minutos el estilo, habilidades y pensamiento de diseño de la persona. Busca sitios que sean simples de navegar, pero visualmente atractivos. Valora la organización, la claridad y la presentación profesional.
 
+Martín – 22 años
+#### Demografía: Estudiante de diseño en su último año, vive en Valparaíso. Soltero, usa principalmente su celular y laptop. Le gusta revisar referencias visuales en Pinterest y Awwwards.
+
+#### Comportamientos y Creencias:
+Pasa mucho tiempo explorando portafolios de diseñadores jóvenes y estudios. Busca inspiración para definir su propia identidad profesional. Le gusta el diseño limpio, con buena tipografía y paletas suaves. Prefiere páginas que se sientan cercanas, con lenguaje visual claro y sin exceso de efectos.
+
+#### Necesidades y Objetivos:
+Encontrar referentes que le muestren cómo presentar su trabajo de forma cuidada y personal. Quiere aprender cómo equilibrar estética y contenido, y entender cómo los demás diseñadores comunican su proceso creativo.
+
 ### Proto2: *Usuario Promedio*
 
 Rodrigo – 45 años
