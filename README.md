@@ -33,6 +33,8 @@ Quiere entender rápidamente qué tipo de proyectos realiza la diseñadora y si 
 
 ## ¿Qué existe que es similar a la propuesta?
 1. Lena Steinkühler
+
+<img src= https://raw.githubusercontent.com/Marita03/Trabajo-final-IDW/refs/heads/main/img/IMG1.webp />
 <img width="1424" height="747" alt="Captura de pantalla 2025-11-13 a la(s) 09 56 55" src="https://github.com/user-attachments/assets/21690d54-2bf4-4111-b976-e0fee6b448d6" />
 
 Qué es: Portafolio personal de la diseñadora y artista 3D alemana.
