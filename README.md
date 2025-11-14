@@ -44,7 +44,6 @@ Quiere entender rápidamente qué tipo de proyectos realiza la diseñadora y si 
 1. Lena Steinkühler
 
 <img src= https://raw.githubusercontent.com/Marita03/Trabajo-final-IDW/refs/heads/main/img/IMG1.webp />
-<img width="1424" height="747" alt="Captura de pantalla 2025-11-13 a la(s) 09 56 55" src="https://github.com/user-attachments/assets/21690d54-2bf4-4111-b976-e0fee6b448d6" />
 
 Qué es: Portafolio personal de la diseñadora y artista 3D alemana.
 Fuente: https://www.lenasteinkuehler.com/
@@ -56,7 +55,7 @@ Aspectos Negativos:
 Poca información contextual de los proyectos; se enfoca más en la imagen que en la narrativa.
 
 2. Julie Bonnemoy
-<img width="1424" height="777" alt="Captura de pantalla 2025-11-13 a la(s) 09 52 46" src="https://github.com/user-attachments/assets/562f00fe-2a4a-4842-ae4e-23d53cd75e45" />
+<img src= https://raw.githubusercontent.com/Marita03/Trabajo-final-IDW/refs/heads/main/img/IMG2.webp />
 
 Qué es: Portafolio web de diseñadora multidisciplinaria francesa.
 Fuente: https://www.juliebonnemoy.com/ 
@@ -68,7 +67,7 @@ Aspectos Negativos:
 El contenido tarda en cargar; el menú no es muy evidente en la primera visita.
 
 3. Kasia Siwosz
-<img width="1424" height="778" alt="Captura de pantalla 2025-11-13 a la(s) 09 58 14" src="https://github.com/user-attachments/assets/cceb37b3-c0bc-4b23-ba49-f77f535a6dde" />
+<img src= https://raw.githubusercontent.com/Marita03/Trabajo-final-IDW/refs/heads/main/img/IMG3.webp />
 
 Qué es: Portafolio de dirección de arte y diseño gráfico.
 Fuente: https://www.kasiasiwosz.com/ 
@@ -80,7 +79,7 @@ Aspectos Negativos:
 La jerarquía visual podría reforzarse más; algunos textos se perciben muy pequeños.
 
 4. Bastion Cycles
-<img width="1424" height="778" alt="Captura de pantalla 2025-11-13 a la(s) 09 59 02" src="https://github.com/user-attachments/assets/15f7e14d-df16-47e8-afb7-c8b36d0a0847" />
+<img src= https://raw.githubusercontent.com/Marita03/Trabajo-final-IDW/refs/heads/main/img/IMG4.webp />
 
 Qué es: Sitio web de una marca de bicicletas de lujo hechas a medida.
 Fuente: https://bastioncycles.com/
@@ -92,7 +91,7 @@ Aspectos Negativos:
 Menú poco intuitivo en dispositivos móviles; se centra más en producto que en experiencia.
 
 5. Culinary Odyssey
-<img width="1424" height="778" alt="Captura de pantalla 2025-11-13 a la(s) 09 59 41" src="https://github.com/user-attachments/assets/456be53e-be02-4f86-9f0f-20f4f9b719c9" />
+<img src= https://raw.githubusercontent.com/Marita03/Trabajo-final-IDW/refs/heads/main/img/IMG5.webp />
 
 Qué es: Sitio web interactivo de experiencias culinarias globales.
 Fuente: https://culinaryodissey.uprock.pro/
@@ -104,7 +103,7 @@ Aspectos Negativos:
 Demasiado pesado en carga inicial; podría distraer del contenido principal.
 
 6. Atelier Matin
-<img width="1424" height="778" alt="Captura de pantalla 2025-11-13 a la(s) 10 00 24" src="https://github.com/user-attachments/assets/13610088-4bcd-4fbc-bb0e-b102ba8edbb5" />
+<img src= https://raw.githubusercontent.com/Marita03/Trabajo-final-IDW/refs/heads/main/img/IMG6.webp />
 
 Qué es: Estudio de diseño con enfoque en dirección de arte y branding.
 Fuente: https://www.ateliermatin.com/
@@ -116,6 +115,5 @@ Aspectos Negativos:
 Escasa información sobre procesos o autores detrás de los proyectos.
 
 ## ¿Qué existe que puede inspirar la propuesta?
-<img width="781" height="436" alt="Captura de pantalla 2025-11-13 a la(s) 11 41 57" src="https://github.com/user-attachments/assets/93b68943-7d94-4216-8482-15eaf2cce8e5" />
-
+<img src= https://raw.githubusercontent.com/Marita03/Trabajo-final-IDW/refs/heads/main/img/Portafolio.webp />
 
