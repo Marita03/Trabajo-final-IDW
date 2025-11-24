@@ -1,0 +1,153 @@
+/* ============================================
+   TIPOGRAFÍA BASE
+   ============================================ */
+
+:root {
+    --bg-color: #f8f8f8;
+    --text-main: #111111;
+    --text-soft: #6e6e6e;
+    --accent: #8b8b8b;
+    --font-main: 'Nunito', 'Quicksand', 'Montserrat', system-ui, -apple-system, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-main);
+    font-family: var(--font-main);
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+/* ============================================
+   NAVEGACIÓN
+   ============================================ */
+
+.nav {
+    position: fixed;
+    top: 32px;
+    right: 50px;
+    z-index: 1000;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    display: flex;
+    gap: 32px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: var(--text-main);
+    position: relative;
+    transition: opacity 0.3s ease;
+}
+
+.nav a:hover {
+    opacity: 0.6;
+}
+
+.nav a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 1px;
+    background: var(--accent);
+    left: 0;
+    bottom: -4px;
+    transition: width 0.3s ease;
+}
+
+.nav a:hover::after {
+    width: 100%;
+}
+
+/* ============================================
+   PÁGINAS
+   ============================================ */
+
+.page {
+    min-height: 100vh;
+    display: none;
+    padding: 80px 60px;
+}
+
+.page.active {
+    display: block;
+    animation: fade 0.8s ease forwards;
+}
+
+@keyframes fade {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ============================================
+   HOME
+   ============================================ */
+
+.home-hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 40px;
+}
+
+.hero-name {
+    font-size: 68px;
+    font-weight: 300;
+    letter-spacing: -0.015em;
+    margin-bottom: 12px;
+}
+
+.hero-subtitle {
+    font-size: 13px;
+    letter-spacing: 0.12em;
+    color: var(--text-soft);
+    text-transform: lowercase;
+    margin-bottom: 30px;
+}
+
+.hero-description {
+    font-size: 14px;
+    max-width: 420px;
+    color: var(--text-soft);
+    line-height: 1.7;
+}
+
+/* ============================================
+   CONTENIDO GENERAL
+   ============================================ */
+
+.section-title {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.section-text {
+    max-width: 600px;
+    font-size: 14px;
+    color: var(--text-soft);
+}
+
+/* ============================================
+   NÚMERO DE PÁGINA
+   ============================================ */
+
+.page-number {
+    position: fixed;
+    bottom: 40px;
+    right: 50px;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    color: var(--text-soft);
+    opacity: 0.5;
+}
