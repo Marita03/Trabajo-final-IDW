@@ -1,34 +1,67 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="utf-8">
-    <meta name="robots" content="noindex, nofollow">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="style.css" rel="stylesheet"/>
-        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <title>Maritas_Portafolio</title>
-  </head>
-  <body>
-      <nav class="nav">
-        <a href="#home" class="nav-link active">Inicio</a>
-        <a href="#work" class="nav-link">Mis Proyectos</a>
-        <a href="#about" class="nav-link">Sobre mí</a>
-        <a href="#contact" class="nav-link">Contacto</a>
-    </nav>
------
-    <div class="page active" id="home">
-        <div class="home-hero">
-            <div class="floating-image img-1"></div>
-            <div class="floating-image img-2"></div>
-            <div class="floating-image img-3"></div>
-            <div class="floating-image img-4"></div>
------   
-    <div class="hero-center">
-                <h1 class="hero-name">María Ignacia Orellana Muñoz</h1>
-                <p class="hero-subtitle">DISEÑADORA INTEGRAL</p>
-            </div>
-        </div>
+<head>
+  <meta charset="UTF-8">
+  <title>María Ignacia Orellana</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <a href="#inicio">Inicio</a>
+    <a href="#proyectos">Mis Proyectos</a>
+    <a href="#sobre-mi">Sobre mí</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <!-- INICIO -->
+  <section id="inicio" class="section hero">
+    <div class="hero-content">
+      <h1>María Ignacia Orellana</h1>
+      <p class="hero-subtitle">Estudiante de Diseño</p>
+      <p class="hero-text">
+        Este portafolio reúne proyectos, exploraciones y procesos que nacen
+        desde el diseño, el territorio y la observación.
+      </p>
     </div>
-    
-  </body>
+  </section>
+
+  <!-- PROYECTOS -->
+  <section id="proyectos" class="section proyectos">
+    <h2>Mis Proyectos</h2>
+
+    <div class="grid-proyectos">
+      <div class="proyecto">
+        <div class="img-proyecto"></div>
+        <h3>Nombre del proyecto</h3>
+        <p>Diseño · 2024</p>
+      </div>
+
+      <div class="proyecto">
+        <div class="img-proyecto"></div>
+        <h3>Nombre del proyecto</h3>
+        <p>Identidad · 2023</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE MÍ -->
+  <section id="sobre-mi" class="section sobre-mi">
+    <h2>Sobre mí</h2>
+    <p>
+      Soy estudiante de Diseño en la Pontificia Universidad Católica de Chile.
+      Mi trabajo se centra en la observación, el territorio, la materialidad 
+      y las pequeñas narrativas que conectan a las personas con su entorno.
+    </p>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="section contacto">
+    <h2>Contacto</h2>
+    <p>maria.orellana@ejemplo.com</p>
+    <p>Instagram · @tuusuario</p>
+  </section>
+
+</body>
 </html>
