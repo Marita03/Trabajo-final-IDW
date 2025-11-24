@@ -1,98 +1,58 @@
 [
   {
-    "id": "p1",
-    "title": "Souvenirs Huilo Huilo",
-    "year": "2024",
-    "type": "Producto / Souvenir",
-    "description": "Mini árboles nativos encapsulados como objetos de cuidado y memoria.",
-    "images": [
-      "https://picsum.photos/seed/p1a/800/1067",
-      "https://picsum.photos/seed/p1b/800/1067",
-      "https://picsum.photos/seed/p1c/800/1067"
-    ]
+    "nombre": "Proyecto 1",
+    "descripcion": "Sistema de souvenirs inspirado en Huilo Huilo.",
+    "anio": "2024",
+    "asignatura": "Taller de Diseño",
+    "imagenes": ["img/p1-1.jpg", "img/p1-2.jpg", "img/p1-3.jpg"]
   },
   {
-    "id": "p2",
-    "title": "Bancas Recicladas",
-    "year": "2024",
-    "type": "Mobiliario urbano",
-    "description": "Bancas modulares hechas con materiales reutilizados, pensadas para escaleras y plazas.",
-    "images": [
-      "https://picsum.photos/seed/p2a/800/1067",
-      "https://picsum.photos/seed/p2b/800/1067",
-      "https://picsum.photos/seed/p2c/800/1067"
-    ]
+    "nombre": "Proyecto 2",
+    "descripcion": "Exploración de materialidades textiles.",
+    "anio": "2024",
+    "asignatura": "Laboratorio",
+    "imagenes": ["img/p2-1.jpg", "img/p2-2.jpg", "img/p2-3.jpg"]
   },
   {
-    "id": "p3",
-    "title": "Observatorio Urbano",
-    "year": "2023",
-    "type": "Instalación",
-    "description": "Intervenciones para activar espacios públicos y promover la participación ciudadana.",
-    "images": [
-      "https://picsum.photos/seed/p3a/800/1067",
-      "https://picsum.photos/seed/p3b/800/1067",
-      "https://picsum.photos/seed/p3c/800/1067"
-    ]
+    "nombre": "Proyecto 3",
+    "descripcion": "Diseño de identidad visual.",
+    "anio": "2023",
+    "asignatura": "Gráfica",
+    "imagenes": ["img/p3-1.jpg", "img/p3-2.jpg", "img/p3-3.jpg"]
   },
   {
-    "id": "p4",
-    "title": "Sistema de Souvenirs",
-    "year": "2023",
-    "type": "Servicio / Producto",
-    "description": "Propuesta de sistema narrativo para souvenirs de reserva biológica.",
-    "images": [
-      "https://picsum.photos/seed/p4a/800/1067",
-      "https://picsum.photos/seed/p4b/800/1067",
-      "https://picsum.photos/seed/p4c/800/1067"
-    ]
+    "nombre": "Proyecto 4",
+    "descripcion": "Investigación de objetos y memoria.",
+    "anio": "2023",
+    "asignatura": "Teoría",
+    "imagenes": ["img/p4-1.jpg", "img/p4-2.jpg", "img/p4-3.jpg"]
   },
   {
-    "id": "p5",
-    "title": "Textiles Experimentales",
-    "year": "2022",
-    "type": "Materiales",
-    "description": "Exploración textil con biomateriales y procesos manuales.",
-    "images": [
-      "https://picsum.photos/seed/p5a/800/1067",
-      "https://picsum.photos/seed/p5b/800/1067",
-      "https://picsum.photos/seed/p5c/800/1067"
-    ]
+    "nombre": "Proyecto 5",
+    "descripcion": "Prototipo con biomateriales.",
+    "anio": "2024",
+    "asignatura": "Materiales",
+    "imagenes": ["img/p5-1.jpg", "img/p5-2.jpg", "img/p5-3.jpg"]
   },
   {
-    "id": "p6",
-    "title": "Dirección de Arte Editorial",
-    "year": "2022",
-    "type": "Editorial",
-    "description": "Proyecto editorial que integra fotografía, tipografía y narrativas locales.",
-    "images": [
-      "https://picsum.photos/seed/p6a/800/1067",
-      "https://picsum.photos/seed/p6b/800/1067",
-      "https://picsum.photos/seed/p6c/800/1067"
-    ]
+    "nombre": "Proyecto 6",
+    "descripcion": "Diseño editorial experimental.",
+    "anio": "2023",
+    "asignatura": "Editorial",
+    "imagenes": ["img/p6-1.jpg", "img/p6-2.jpg", "img/p6-3.jpg"]
   },
   {
-    "id": "p7",
-    "title": "Pequeñas Memorias",
-    "year": "2021",
-    "type": "Objeto",
-    "description": "Colección de objetos que recogen historias personales y territoriales.",
-    "images": [
-      "https://picsum.photos/seed/p7a/800/1067",
-      "https://picsum.photos/seed/p7b/800/1067",
-      "https://picsum.photos/seed/p7c/800/1067"
-    ]
+    "nombre": "Proyecto 7",
+    "descripcion": "Diseño de experiencia sensorial.",
+    "anio": "2024",
+    "asignatura": "UX",
+    "imagenes": ["img/p7-1.jpg", "img/p7-2.jpg", "img/p7-3.jpg"]
   },
   {
-    "id": "p8",
-    "title": "Prototipos para la Plaza",
-    "year": "2021",
-    "type": "Prototipo urbano",
-    "description": "Prototipos de interacción social para plazas y encuentros comunitarios.",
-    "images": [
-      "https://picsum.photos/seed/p8a/800/1067",
-      "https://picsum.photos/seed/p8b/800/1067",
-      "https://picsum.photos/seed/p8c/800/1067"
-    ]
+    "nombre": "Proyecto 8",
+    "descripcion": "Exploración en impresión 3D.",
+    "anio": "2024",
+    "asignatura": "Prototipado",
+    "imagenes": ["img/p8-1.jpg", "img/p8-2.jpg", "img/p8-3.jpg"]
   }
 ]
