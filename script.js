@@ -1,62 +1,152 @@
-// Cargar proyectos desde JSON
-fetch("proyectos.json")
-.then(response => response.json())
-.then(data => {
-  const contenedor = document.getElementById("contenedor-proyectos");
+// --------------------
+// Helper: fetch JSON
+// --------------------
+async function loadJSON(url){
+  const resp = await fetch(url);
+  if(!resp.ok) throw new Error('No se pudo cargar ' + url);
+  return resp.json();
+}
 
-  data.forEach((proyecto, index) => {
+/* ========== Iniciar app ========== */
+document.addEventListener('DOMContentLoaded', async () => {
+  try {
+    const data = await loadJSON('proyectos.json');
+    renderProjects(data);
+  } catch (err) {
+    console.error(err);
+  }
 
-    const div = document.createElement("div");
-    div.classList.add("proyecto");
+  // cargar habilidades (array definido abajo)
+  renderSkills();
 
-    // Carrusel
-    let imagenesHTML = "";
-    proyecto.imagenes.forEach((img, i) => {
-      imagenesHTML += `
-        <img src="${img}" class="${i === 0 ? "activo" : ""}">
-      `;
-    });
+  // Botón subir: mostrar/ocultar
+  const btnTop = document.getElementById('btnTop');
+  window.addEventListener('scroll', () => {
+    if(window.scrollY > 300) btnTop.style.display = 'block';
+    else btnTop.style.display = 'none';
+  });
+  btnTop.addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}));
 
-    div.innerHTML = `
-      <div class="carrusel" id="carrusel-${index}">
-        ${imagenesHTML}
-        <div class="botones-carrusel">
-          <button onclick="prev(${index})">←</button>
-          <button onclick="next(${index})">→</button>
-        </div>
-      </div>
-
-      <h3>${proyecto.nombre}</h3>
-      <p>${proyecto.descripcion}</p>
-      <small>${proyecto.anio} – ${proyecto.asignatura}</small>
-    `;
-
-    contenedor.appendChild(div);
+  // "Arriba!" del footer
+  document.getElementById('volver-arriba').addEventListener('click', (e) => {
+    e.preventDefault();
+    window.scrollTo({top:0, behavior:'smooth'});
   });
 });
 
-// Carrusel
-function next(id) {
-  const carrusel = document.getElementById("carrusel-" + id);
-  const imgs = carrusel.querySelectorAll("img");
-  let index = [...imgs].findIndex(img => img.classList.contains("activo"));
-
-  imgs[index].classList.remove("activo");
-  index = (index + 1) % imgs.length;
-  imgs[index].classList.add("activo");
+/* ========== Render projects (cards) ========== */
+function renderProjects(projects){
+  const grid = document.getElementById('projects-grid');
+  projects.forEach((p, i) => {
+    const card = document.createElement('article');
+    card.className = 'card';
+    // contenido tarjeta
+    card.innerHTML = `
+      <img class="thumb" src="${p.photo}" alt="${escapeHtml(p.title)}">
+      <div class="card-body">
+        <div class="card-title">${escapeHtml(p.title)}</div>
+        <div class="card-meta">${escapeHtml(p.category)} · ${escapeHtml(p.category)}</div>
+        <div class="card-desc">${escapeHtml(p.description)}</div>
+      </div>
+    `;
+    // abrir modal al click
+    card.addEventListener('click', () => openModal(p, i));
+    grid.appendChild(card);
+  });
 }
 
-function prev(id) {
-  const carrusel = document.getElementById("carrusel-" + id);
-  const imgs = carrusel.querySelectorAll("img");
-  let index = [...imgs].findIndex(img => img.classList.contains("activo"));
+/* ========== Modal & carousel ========== */
+const modal = document.getElementById('modal');
+const modalCarousel = document.getElementById('modalCarousel');
+const modalTitle = document.getElementById('modalTitle');
+const modalDesc = document.getElementById('modalDesc');
+const modalMeta = document.getElementById('modalMeta');
+let currentIndex = 0;
+let currentProjectImages = [];
 
-  imgs[index].classList.remove("activo");
-  index = (index - 1 + imgs.length) % imgs.length;
-  imgs[index].classList.add("activo");
+function openModal(project, index){
+  // preparar carousel (si en el futuro agregas más imágenes al JSON puedes listarlas)
+  currentProjectImages = project.images && project.images.length ? project.images : [ project.photo ];
+  currentIndex = 0;
+  renderModalCarousel();
+  modalTitle.textContent = project.title;
+  modalDesc.textContent = project.description;
+  modalMeta.textContent = project.category;
+  modal.classList.add('open');
+  modal.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
 }
 
-// Botón subir
-document.getElementById("btnSubir").onclick = () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-};
+// renderiza imagen actual en modal
+function renderModalCarousel(){
+  modalCarousel.innerHTML = ''; // limpiar
+  const img = document.createElement('img');
+  img.src = currentProjectImages[currentIndex];
+  modalCarousel.appendChild(img);
+}
+
+// controles next/prev del modal
+document.getElementById('modalNext').addEventListener('click', () => {
+  if(!currentProjectImages.length) return;
+  currentIndex = (currentIndex + 1) % currentProjectImages.length;
+  renderModalCarousel();
+});
+document.getElementById('modalPrev').addEventListener('click', () => {
+  if(!currentProjectImages.length) return;
+  currentIndex = (currentIndex - 1 + currentProjectImages.length) % currentProjectImages.length;
+  renderModalCarousel();
+});
+
+// cerrar modal
+document.getElementById('modal-close').addEventListener('click', closeModal);
+modal.addEventListener('click', (e) => {
+  if(e.target === modal) closeModal();
+});
+document.addEventListener('keydown', (e) => {
+  if(!modal.classList.contains('open')) return;
+  if(e.key === 'Escape') closeModal();
+  if(e.key === 'ArrowRight') { document.getElementById('modalNext').click(); }
+  if(e.key === 'ArrowLeft') { document.getElementById('modalPrev').click(); }
+});
+
+function closeModal(){
+  modal.classList.remove('open');
+  modal.setAttribute('aria-hidden','true');
+  document.body.style.overflow = '';
+}
+
+/* ========== Habilidades (tabla con barras SVG) ========== */
+const habilidades = [
+  { programa: "Illustrator", valor: "90" },
+  { programa: "Fusion 360", valor: "70" },
+  { programa: "Twinmotion", valor: "40" },
+  { programa: "Photoshop", valor: "30" },
+  { programa: "Inglés", valor: "70" },
+];
+
+function renderSkills(){
+  const donde = document.querySelector("#habilidades-body");
+  habilidades.forEach((h) => {
+    donde.innerHTML += `
+      <tr>
+        <td style="width:32%;">${escapeHtml(h.programa)}</td>
+        <td>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 10" preserveAspectRatio="none" style="width:100%;height:14px;">
+            <rect width="100" height="6" fill="#e9ecef" rx="2" />
+            <rect width="${h.valor}" height="6" fill="darkseagreen" rx="2" />
+          </svg>
+        </td>
+      </tr>
+    `;
+  });
+}
+
+/* ========== utilidades ========= */
+function escapeHtml(str){
+  return String(str)
+    .replaceAll('&','&amp;')
+    .replaceAll('<','&lt;')
+    .replaceAll('>','&gt;')
+    .replaceAll('"','&quot;')
+    .replaceAll("'",'&#39;');
+}
