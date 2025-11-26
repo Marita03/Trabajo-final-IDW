@@ -1,73 +1,117 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Portafolio - María Ignacia</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portafolio — María Ignacia Orellana</title>
 
-  <!-- Tipografías redondas y simples -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&family=Nunito:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- Fuentes -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
 
-  <!-- Enlace a CSS -->
-  <link rel="stylesheet" href="style.css">
+  <!-- Estilos -->
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
 
-  <!-- Barra superior -->
+  <!-- HEADER (barra superior fija - transparente) -->
   <header>
-    <nav>
-      <a href="#inicio">Inicio</a>
-      <a href="#proyectos">Mis Proyectos</a>
-      <a href="#sobremi">Sobre mí</a>
-      <a href="#contacto">Contacto</a>
+    <nav class="nav">
+      <a href="#inicio">INICIO</a>
+      <a href="#proyectos">MIS PROYECTOS</a>
+      <a href="#sobremi">SOBRE MÍ</a>
+      <a href="#contacto">CONTACTO</a>
     </nav>
   </header>
 
-  <!-- INICIO -->
-  <section id="inicio">
-    <div class="inicio-contenido">
-      <h1>María Ignacia Orellana</h1>
-      <p>Estudiante</p>
-    </div>
-  </section>
+  <!-- HERO / INICIO -->
+  <main>
+    <section id="inicio" class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-inner">
+        <h1 class="hero-name">María Ignacia Orellana Muñoz</h1>
+        <p class="hero-subinfo">Portafolio Diseño Integral — 2023–2025</p>
+      </div>
+    </section>
 
-  <!-- PROYECTOS -->
-  <section id="proyectos">
-    <h2>Mis Proyectos</h2>
-    <div id="contenedor-proyectos"> 
-      <!-- Aquí se cargarán desde JSON -->
-    </div>
-  </section>
+    <!-- PROYECTOS -->
+    <section id="proyectos" class="section">
+      <div class="container">
+        <h2 class="section-title">Mis Proyectos</h2>
+        <div id="projects-grid" class="projects-grid">
+          <!-- tarjetas de proyectos cargadas por JS desde proyectos.json -->
+        </div>
+      </div>
+    </section>
 
-  <!-- SOBRE MÍ -->
-  <section id="sobremi">
-    <div class="sobremi-container">
-      <img src="img/yo.jpg" alt="Foto María Ignacia">
-      <div class="sobremi-texto">
-        <h2>Sobre mí</h2>
-        <p>
-          Soy estudiante de diseño, me interesa trabajar con objetos, 
-          memoria, naturaleza y procesos sensibles que conecten con el territorio.
-        </p>
+    <!-- SOBRE MÍ -->
+    <section id="sobremi" class="section">
+      <div class="container sobremi">
+        <div class="foto-wrap">
+          <!-- usa img/yo.jpg si la tienes; si no, la reemplazas por la URL -->
+          <img src="img/yo.jpg" alt="María Ignacia" class="mi-foto" />
+          <p class="foto-caption">María Ignacia Orellana Muñoz</p>
+        </div>
+
+        <div class="sobre-texto">
+          <h2>Sobre mí</h2>
+          <p class="sobre-parrafo">
+            Mi nombre es María Ignacia Orellana Muñoz y estudio diseño integral en la Pontificia Universidad Católica de Chile.
+            <br><br>
+            Mis intereses se orientan al diseño industrial, sin dejar atrás las diferentes áreas. Lo que más me interesa es hacer maquetas y trabajos manuales.
+            <br><br>
+            En mis trabajos me destaco por la simpleza y la poca carga visual, que logran llamar la atención exhibiendo una estética limpia y equilibrada, donde cada elemento cumple un propósito.
+          </p>
+
+          <h3>Habilidades</h3>
+          <table class="skills-table">
+            <tbody id="habilidades-body">
+              <!-- aqui JS inyecta las filas (ver script.js) -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO / FOOTER -->
+    <footer id="contacto" class="footer">
+      <div class="container footer-inner">
+        <p class="float-end"><a href="#" id="volver-arriba">Arriba!</a></p>
+        <small class="copy">@María Ignacia Orellana Muñoz</small>
+        <br/>
+        <small class="links">
+          <a href="https://www.instagram.com/mari_ignacia03/?hl=es-la" target="_blank">Instagram</a>
+          <a href="https://www.linkedin.com/in/mar%C3%ADa-ignacia-orellana-mu%C3%B1oz-413694359/" target="_blank">LinkedIn</a>
+          <a href="mailto:miorellanam@uc.cl">Correo</a>
+        </small>
+        <p class="telefono">+56 9 1234 5678</p>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- BOTÓN FLOTANTE SUBIR -->
+  <button id="btnTop" aria-label="Ir arriba">↑</button>
+
+  <!-- MODAL: muestra imagen grande al clicar proyecto -->
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="modal-content">
+      <button id="modal-close" class="modal-close" aria-label="Cerrar">✕</button>
+      <div class="modal-body">
+        <div class="modal-carousel" id="modalCarousel"></div>
+        <div class="modal-info">
+          <h3 id="modalTitle"></h3>
+          <p id="modalDesc"></p>
+          <small id="modalMeta"></small>
+        </div>
+      </div>
+      <div class="modal-controls">
+        <button id="modalPrev">←</button>
+        <button id="modalNext">→</button>
       </div>
     </div>
-  </section>
+  </div>
 
-  <!-- CONTACTO -->
-  <footer id="contacto">
-    <h2>Contacto</h2>
-    <div class="contacto-links">
-      <a href="https://instagram.com/" target="_blank">Instagram</a>
-      <a href="mailto:correo@gmail.com">Correo</a>
-      <a href="https://linkedin.com/" target="_blank">LinkedIn</a>
-      <p>+56 9 1234 5678</p>
-    </div>
-  </footer>
-
-  <!-- Botón subir -->
-  <button id="btnSubir">↑</button>
-
-  <!-- JS -->
+  <!-- Script -->
   <script src="script.js"></script>
 </body>
 </html>
