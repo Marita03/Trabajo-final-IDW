@@ -1,58 +1,50 @@
 [
   {
-    "nombre": "Proyecto 1",
-    "descripcion": "Sistema de souvenirs inspirado en Huilo Huilo.",
-    "anio": "2024",
-    "asignatura": "Taller de Diseño",
-    "imagenes": ["img/p1-1.jpg", "img/p1-2.jpg", "img/p1-3.jpg"]
+    "title": "Velare",
+    "category": "2025",
+    "photo": "https://marita03.github.io/clase10.2/img/velare3.webp",
+    "description": "Es una estructura de exhibición diseñada para instalarse al interior de un escaparate o window display, ubicado en la fachada de una tienda. Su función es enmarcar y destacar prendas y accesorios, transformando la vitrina en una experiencia visual que invita a detenerse y observar."
   },
   {
-    "nombre": "Proyecto 2",
-    "descripcion": "Exploración de materialidades textiles.",
-    "anio": "2024",
-    "asignatura": "Laboratorio",
-    "imagenes": ["img/p2-1.jpg", "img/p2-2.jpg", "img/p2-3.jpg"]
+    "title": "Pauu",
+    "category": "2023",
+    "photo": "https://marita03.github.io/clase10.2/img/pauu3.webp",
+    "description": "Arnés con diseño ilustrado identitario de la Vega. Incluye sistema QR de identificación y registro histórico de cuidados de cada perro."
   },
   {
-    "nombre": "Proyecto 3",
-    "descripcion": "Diseño de identidad visual.",
-    "anio": "2023",
-    "asignatura": "Gráfica",
-    "imagenes": ["img/p3-1.jpg", "img/p3-2.jpg", "img/p3-3.jpg"]
+    "title": "Külla-Mawida",
+    "category": "2024",
+    "photo": "https://marita03.github.io/clase10.2/img/arboles3.webp",
+    "description": "Cápsulas miniatura de árboles nativos de Huilo Huilo, que resaltan la singularidad de cada árbol."
   },
   {
-    "nombre": "Proyecto 4",
-    "descripcion": "Investigación de objetos y memoria.",
-    "anio": "2023",
-    "asignatura": "Teoría",
-    "imagenes": ["img/p4-1.jpg", "img/p4-2.jpg", "img/p4-3.jpg"]
+    "title": "Larún",
+    "category": "2023",
+    "photo": "https://marita03.github.io/clase10.2/img/larun3.webp",
+    "description": "Sistema de soporte portátil diseñado para manipularse con los pies, ajustable a la anatomía del usuario."
   },
   {
-    "nombre": "Proyecto 5",
-    "descripcion": "Prototipo con biomateriales.",
-    "anio": "2024",
-    "asignatura": "Materiales",
-    "imagenes": ["img/p5-1.jpg", "img/p5-2.jpg", "img/p5-3.jpg"]
+    "title": "Conmigo",
+    "category": "2025",
+    "photo": "https://marita03.github.io/clase10.2/img/conmigo3.webp",
+    "description": "Prenda calmante para perros que viajan en la bodega del avión."
   },
   {
-    "nombre": "Proyecto 6",
-    "descripcion": "Diseño editorial experimental.",
-    "anio": "2023",
-    "asignatura": "Editorial",
-    "imagenes": ["img/p6-1.jpg", "img/p6-2.jpg", "img/p6-3.jpg"]
+    "title": "Boomerang",
+    "category": "2024",
+    "photo": "https://marita03.github.io/clase10.2/img/boomerang3.webp",
+    "description": "Pieza hecha con biomateriales, ocupando borra de café."
   },
   {
-    "nombre": "Proyecto 7",
-    "descripcion": "Diseño de experiencia sensorial.",
-    "anio": "2024",
-    "asignatura": "UX",
-    "imagenes": ["img/p7-1.jpg", "img/p7-2.jpg", "img/p7-3.jpg"]
+    "title": "Bolso",
+    "category": "2024",
+    "photo": "https://marita03.github.io/clase10.2/img/bolso3.webp",
+    "description": "Confección de bolso para computador con serigrafía."
   },
   {
-    "nombre": "Proyecto 8",
-    "descripcion": "Exploración en impresión 3D.",
-    "anio": "2024",
-    "asignatura": "Prototipado",
-    "imagenes": ["img/p8-1.jpg", "img/p8-2.jpg", "img/p8-3.jpg"]
+    "title": "Polerón",
+    "category": "2025 - En proceso",
+    "photo": "https://marita03.github.io/clase10.2/img/poleron3.webp",
+    "description": "Prenda de mi confección."
   }
 ]
