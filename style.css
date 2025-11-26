@@ -1,125 +1,211 @@
-/* Tipografía base */
-body {
-  margin: 0;
-  font-family: 'Nunito', sans-serif;
-  background-color: #f5f5f5;
-  color: #111;
+/* ========= Paleta y tipografías ========= */
+:root{
+  --darkseagreen: darkseagreen;    /* tono semántico (puedes usar #b19a82 para acentos) */
+  --beige: #b19a82;
+  --claro: #ded4cd;
+  --black: #000000;
+  --font-main: 'Nunito', sans-serif;
+  --font-alt: 'Montserrat', sans-serif;
+  --max-width: 1100px;
 }
 
-/* Barra superior */
-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  padding: 15px 40px;
-  border-bottom: 1px solid black;
-  background: transparent;
+*{ box-sizing: border-box; }
+body{
+  margin:0;
+  font-family:var(--font-main);
+  color:var(--black);
+  background:var(--claro);
+  -webkit-font-smoothing:antialiased;
 }
 
-nav {
-  text-align: right;
+/* ===== Header - barra superior fija, sin línea gruesa ===== */
+header{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index:1200;
+  padding:14px 28px;
+  background: rgba(255,255,255,0.55); /* semitransparente */
+  backdrop-filter: blur(6px);
 }
 
-nav a {
-  margin-left: 20px;
-  text-decoration: none;
-  color: black;
-  font-family: 'Montserrat', sans-serif;
+.nav{
+  display:flex;
+  justify-content:flex-end;
+  gap:20px;
 }
 
-/* INICIO */
-#inicio {
-  height: 100vh;
-  background: url("img/fondo.jpg") no-repeat center center/cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+.nav a{
+  text-decoration:none;
+  color:var(--black);
+  font-family:var(--font-alt);
+  font-size:12px;              /* más pequeño */
+  letter-spacing:0.12em;
+  text-transform:uppercase;    /* todo en mayúscula */
+  opacity:0.95;
+  transition: opacity .2s;
 }
 
-.inicio-contenido h1 {
-  font-size: 3.5rem;
-  margin: 0;
+.nav a:hover{ opacity:.6; }
+
+/* ===== HERO / INICIO ===== */
+.hero{
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+  background: url("https://marita03.github.io/clase10.2/img/velare3.webp") center/cover no-repeat; /* fondo ejemplo */
+  margin-top:0;
 }
 
-.inicio-contenido p {
-  font-size: 1.3rem;
+.hero-overlay{
+  position:absolute;
+  inset:0;
+  background: linear-gradient(180deg, rgba(177,154,130,0.45), rgba(0,0,0,0.18));
 }
 
-/* PROYECTOS */
-#proyectos {
-  padding: 100px 60px;
+.hero-inner{
+  position:relative;
+  text-align:center;
+  color:#fff;
+  animation: fadeUp 1.1s ease both;
+  padding: 0 20px;
 }
 
-#contenedor-proyectos {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 40px;
+.hero-name{
+  font-family:var(--font-alt);
+  font-weight:300;
+  font-size: clamp(28px, 5vw, 48px);
+  margin:0;
 }
 
-.proyecto {
-  background: white;
-  padding: 15px;
-  border: 1px solid #ddd;
+.hero-subinfo{
+  margin-top:10px;
+  font-size:14px;
+  letter-spacing:0.08em;
+  opacity:0.95;
 }
 
-/* Carrusel */
-.carrusel {
-  position: relative;
+/* animación suave */
+@keyframes fadeUp{
+  from{ opacity:0; transform:translateY(18px); }
+  to{ opacity:1; transform:translateY(0); }
 }
 
-.carrusel img {
-  width: 100%;
-  height: auto;
-  display: none;
+/* ===== Secciones generales ===== */
+.section{ padding:100px 20px; }
+.container{ max-width:var(--max-width); margin:0 auto; }
+
+/* ===== PROYECTOS: grid de tarjetas ===== */
+.section-title{ font-family:var(--font-alt); color:var(--beige); text-align:center; margin-bottom:30px; font-size:20px; }
+
+.projects-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap:28px;
 }
 
-.carrusel img.activo {
-  display: block;
+/* tarjeta del proyecto */
+.card{
+  background:#fff;
+  border-radius:8px;
+  overflow:hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  cursor:pointer;
 }
 
-.botones-carrusel {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 5px;
+.card:hover{
+  transform: translateY(-8px);
+  box-shadow: 0 18px 36px rgba(0,0,0,0.12);
 }
 
-/* SOBRE MI */
-#sobremi {
-  padding: 100px 60px;
+.thumb{
+  width:100%;
+  aspect-ratio: 4/3;
+  background:#eee;
+  display:block;
+  object-fit:cover;
 }
 
-.sobremi-container {
-  display: flex;
-  gap: 40px;
-  align-items: center;
+/* descripción debajo de la imagen */
+.card-body{ padding:12px 14px; }
+.card-title{ font-family:var(--font-alt); font-size:16px; margin:6px 0; color:var(--black); }
+.card-meta{ font-size:12px; color:rgba(0,0,0,0.65); margin-bottom:8px; }
+.card-desc{ font-size:13px; color:rgba(0,0,0,0.9); }
+
+/* ===== MODAL (vista ampliada) ===== */
+.modal{
+  position:fixed;
+  inset:0;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  background: rgba(10,10,10,0.55);
+  z-index:2000;
+  padding:20px;
 }
 
-.sobremi-container img {
-  width: 250px;
+.modal.open{ display:flex; animation:fadeModal .18s ease; }
+
+@keyframes fadeModal{ from{opacity:0} to{opacity:1} }
+
+.modal-content{
+  width:100%;
+  max-width:980px;
+  background:#fff;
+  border-radius:8px;
+  overflow:hidden;
+  padding:16px;
+  box-shadow:0 20px 40px rgba(0,0,0,0.2);
 }
 
-/* CONTACTO */
-footer {
-  border-top: 1px solid black;
-  padding: 50px;
-  text-align: center;
+.modal-carousel img{ width:100%; display:block; object-fit:cover; border-radius:6px; }
+.modal-info{ margin-top:12px; }
+
+/* controles del modal (sencillos) */
+.modal-controls{ display:flex; justify-content:space-between; gap:10px; margin-top:12px; }
+.modal-controls button{ background:var(--darkseagreen); color:#fff; border:none; padding:8px 12px; border-radius:6px; cursor:pointer; }
+
+/* ===== SOBRE MÍ ===== */
+.sobremi{ display:flex; gap:30px; align-items:flex-start; flex-wrap:wrap; }
+.mi-foto{ width:260px; border-radius:6px; object-fit:cover; display:block; }
+.foto-caption{ font-size:13px; color:rgba(0,0,0,0.7); margin-top:8px; text-align:center; }
+
+.sobre-parrafo{ font-size:15px; color:var(--black); line-height:1.6; margin-top:8px; }
+
+/* Habilidades - tabla simple */
+.skills-table{ width:100%; margin-top:12px; border-collapse:collapse; }
+.skills-table td{ padding:6px 4px; vertical-align:middle; }
+
+/* svg de barra: se mantiene interno en JS (usa darkseagreen) */
+
+/* ===== FOOTER / CONTACTO ===== */
+.footer{ background:var(--claro); padding:40px 20px; border-top: none; text-align:center; }
+
+.footer .links a{ margin:0 10px; text-decoration:none; color:var(--black); }
+
+/* ===== BOTÓN SUBIR ===== */
+#btnTop{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  background:var(--darkseagreen);
+  color:#fff;
+  border:none;
+  padding:10px 12px;
+  border-radius:6px;
+  cursor:pointer;
+  display:none;
+  z-index:1500;
 }
 
-.contacto-links a {
-  margin: 10px;
-  text-decoration: none;
-  color: black;
-}
-
-/* Botón subir */
-#btnSubir {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  padding: 10px 14px;
-  font-size: 16px;
-  cursor: pointer;
-  border: 1px solid black;
-  background: white;
+/* ===== Responsive ===== */
+@media (max-width:800px){
+  .hero-inner{ padding:0 18px; }
+  .mi-foto{ width:180px; }
+  .nav{ gap:12px; }
+  .nav a{ font-size:11px; }
 }
