@@ -1,44 +1,29 @@
-fetch("proyectos.json")
-  .then(response => response.json())
-  .then(data => {
+const portfolio = document.querySelector("#popote");
 
-    const galeria = document.getElementById("galeria");
+async function cargarProyectos(url) {
+  try {
+    const respuesta = await fetch(url);
+    const datos = await respuesta.json();
 
-    if (galeria) {
-      data.forEach(p => {
-        galeria.innerHTML += `
-          <div class="tarjeta">
-            <img src="${p.photo}">
-            <h3>${p.title}</h3>
-            <p>${p.category}</p>
-            <p>${p.description}</p>
-          </div>`;
-      });
-    }
-  });
+    const proyectos = datos.data;
 
-// habilidades
-const habilidades = [
-  { programa: "Illustrator", valor: 90 },
-  { programa: "Fusion 360", valor: 70 },
-  { programa: "Twinmotion", valor: 40 },
-  { programa: "Photoshop", valor: 30 },
-  { programa: "Inglés", valor: 70 },
-];
+    proyectos.forEach((proyecto) => {
+      portfolio.innerHTML += `
+        <div class="proyecto-card">
+          <img src="${proyecto.photo}" alt="${proyecto.title}">
+          
+          <div class="proyecto-info">
+            <h3>${proyecto.title}</h3>
+            <p>${proyecto.description}</p>
+            <span class="categoria">${proyecto.category}</span>
+          </div>
+        </div>
+      `;
+    });
 
-const tabla = document.getElementById("aqui");
-
-if (tabla) {
-  habilidades.forEach(h => {
-    tabla.innerHTML += `
-      <tr>
-        <td>${h.programa}</td>
-        <td>
-          <svg viewBox="0 0 100 6" width="200">
-            <rect width="100" height="4" fill="#ded4cd" rx="2"/>
-            <rect width="${h.valor}" height="4" fill="darkseagreen" rx="2"/>
-          </svg>
-        </td>
-      </tr>`;
-  });
+  } catch (error) {
+    console.error("Error cargando proyectos:", error);
+  }
 }
+
+cargarProyectos("https://api.myjson.online/v1/records/72a0a513-be36-4a6c-b360-812151ac4e75");
