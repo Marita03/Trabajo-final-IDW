@@ -1,5 +1,4 @@
-const contenedor = document.querySelector("#contenedor-proyectos";
-
+const contenedor = document.querySelector("#contenedor-proyectos");
 
 async function cargarProyectos(url) {
   try {
