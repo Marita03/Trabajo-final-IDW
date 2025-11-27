@@ -3,6 +3,7 @@ body {
   font-family: 'Nunito', 'Quicksand', 'Montserrat', sans-serif;
   background: white;
   color: black;
+  padding-top: 80px; 
 }
 
 .navbar {
@@ -30,13 +31,12 @@ body {
   color: black;
   font-size: 12px;
   letter-spacing: 2px;
-  white-space: nowrap; 
+  white-space: nowrap;
 }
-
 
 /* INICIO */
 .inicio {
-  height: 100vh;
+  height: calc(100vh - 80px);
   background-image: url("https://raw.githubusercontent.com/Marita03/Trabajo-final-IDW/refs/heads/main/img/inicio.webp");
   background-size: cover;
   background-position: center;
@@ -57,13 +57,33 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 20px;
-  padding: 120px 40px;
+  padding: 40px;
+}
+
+.proyecto-card {
+  background: #fafafa;
+  padding: 15px;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.proyecto-card:hover {
+  transform: translateY(-5px);
+}
+
+.proyecto-card img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.proyecto-info {
+  margin-top: 10px;
 }
 
 /* SOBRE MÍ */
 .perfil {
   display: flex;
-  padding: 120px 40px;
+  padding: 40px;
   gap: 40px;
 }
 
@@ -78,6 +98,7 @@ body {
   height: 6px;
   border-radius: 4px;
 }
+
 .barra div {
   background: darkseagreen;
   height: 100%;
@@ -85,13 +106,15 @@ body {
 
 /* FOOTER */
 footer {
-  padding: 40px;
+  padding: 60px 40px;
+  margin-top: 40px;
   text-align: center;
   background: #fafafa;
+  scroll-margin-top: 100px; /* CLAVE PARA CONTACTO */
 }
 
 .contacto-links a {
-  color: #b19a82;
+  color: darkseagreen;
   margin: 10px;
   text-decoration: none;
   font-weight: 600;
@@ -102,12 +125,14 @@ footer {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  padding: 10px 15px;
+  padding: 12px 16px;
   background: darkseagreen;
   border: none;
   border-radius: 50%;
   cursor: pointer;
   display: none;
+  color: black;
+  font-size: 16px;
 }
 
 /* Animación */
@@ -119,11 +144,15 @@ footer {
 /* Responsive */
 @media (max-width: 768px) {
   .navbar ul {
-    flex-wrap: wrap;
     gap: 10px;
+    font-size: 11px;
   }
 
   .perfil {
     flex-direction: column;
+  }
+
+  .perfil img {
+    width: 100%;
   }
 }
