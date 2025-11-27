@@ -2,56 +2,58 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Sobre mí</title>
+  <title>Sobre Mí</title>
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Quicksand:wght@300;400;600&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Nunito:wght@400;600&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<nav class="navbar fixed-top navbar-expand-lg">
-  <div class="container">
-    <ul class="navbar-nav ms-auto">
-      <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-      <li class="nav-item"><a class="nav-link" href="proyectos.html">Mis proyectos</a></li>
-      <li class="nav-item"><a class="nav-link" href="sobre-mi.html">Sobre mí</a></li>
-      <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+<header>
+  <nav class="navbar">
+    <div class="logo">MIO</div>
+    <ul>
+      <li><a href="index.html">INICIO</a></li>
+      <li><a href="proyectos.html">MIS PROYECTOS</a></li>
+      <li><a href="sobre-mi.html">SOBRE MÍ</a></li>
+      <li><a href="#contacto">CONTACTO</a></li>
     </ul>
-  </div>
-</nav>
+  </nav>
+</header>
 
-<section class="container seccion sobre-mi">
-  <div class="row align-items-center">
+<main class="sobremi">
+  <div class="perfil">
+    <img src="https://raw.githubusercontent.com/Marita03/Trabajo-final-IDW/refs/heads/main/img/yo.webp">
     
-    <div class="col-md-5">
-      <img class="img-fluid foto-yo" 
-      src="https://raw.githubusercontent.com/Marita03/Trabajo-final-IDW/refs/heads/main/img/yo.webp">
-    </div>
-
-    <div class="col-md-7">
-      <h2>Sobre mí</h2>
+    <div class="texto-perfil">
+      <h1>Sobre mí</h1>
       <p>
-        Mi nombre es María Ignacia Orellana Muñoz y estudio diseño integral en la Pontificia Universidad Católica de Chile.  
-        Mis intereses se orientan al diseño industrial, sin dejar atrás otras áreas.
-        <br><br>
-        Me gusta trabajar con objetos, materiales y procesos manuales. Me interesa que mis propuestas conecten desde la sensibilidad y la simpleza.
+        Soy estudiante de Diseño Integral. Me interesa trabajar con procesos, memorias y materialidades,
+        explorando objetos cargados de sentido y conexión con la naturaleza.
       </p>
 
-      <h3>Habilidades</h3>
-      <table>
-        <tbody id="aqui"></tbody>
-      </table>
-
+      <h3>Mis habilidades</h3>
+      <div class="habilidades">
+        <div><span>Illustrator</span><div class="barra"><div style="width:80%"></div></div></div>
+        <div><span>Photoshop</span><div class="barra"><div style="width:70%"></div></div></div>
+        <div><span>Figma</span><div class="barra"><div style="width:85%"></div></div></div>
+      </div>
     </div>
   </div>
-</section>
+</main>
 
-<footer class="footer">
-  <p>@ María Ignacia Orellana Muñoz</p>
+<footer id="contacto">
+  <h2>CONTACTO</h2>
+  <p class="texto-contacto">Si te interesa mi trabajo, estaré feliz de que me contactes:</p>
+
+  <div class="contacto-links">
+    <a href="https://instagram.com">Instagram</a>
+    <a href="mailto:correo@ejemplo.com">Correo</a>
+    <a href="https://linkedin.com">LinkedIn</a>
+  </div>
 </footer>
+
+<button id="btnSubir">↑</button>
 
 <script src="script.js"></script>
 </body>
