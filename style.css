@@ -1,75 +1,125 @@
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Quicksand", "Nunito", "Montserrat", sans-serif;
+  background-color: #ded4cd;
+  color: black;
   margin: 0;
 }
 
-.titulo-seccion {
-  color: darkseagreen;
-  font-size: 1.6rem;
-  margin-bottom: 1rem;
+/* Barra superior */
+.navbar {
+  background-color: rgba(177, 154, 130, 0.9); /* #b19a82 */
+  padding: 10px 0;
 }
 
-.portada {
+.nav-link {
+  color: black;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-left: 25px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+/* INICIO */
+.inicio {
+  height: 100vh;
+  background-image: url("https://raw.githubusercontent.com/Marita03/Trabajo-final-IDW/refs/heads/main/img/inicio.webp");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenido-inicio {
+  background-color: rgba(222, 212, 205, 0.85);
+  padding: 50px 70px;
   text-align: center;
-  padding: 4rem 1rem;
+  border-radius: 12px;
+  animation: fade 2s ease;
 }
 
-.portada h1 {
-  font-weight: 400;
+.contenido-inicio h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 38px;
+  margin-bottom: 15px;
 }
 
-.portada p {
-  font-size: 1.1rem;
-  color: #555;
+.contenido-inicio p {
+  font-family: "Nunito", sans-serif;
+  font-size: 16px;
+  letter-spacing: 1px;
 }
 
-.card-img-top {
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
+@keyframes fade {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-.barra-activa {
-  fill: #4f7f64;
+/* Secciones */
+.seccion {
+  padding-top: 120px;
+  padding-bottom: 80px;
+  min-height: 80vh;
 }
 
-svg rect:first-child {
-  fill: #e0efe6;
+/* PROYECTOS */
+.galeria-proyectos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 35px;
 }
 
-.nombre-habilidad {
-  width: 120px;
+.tarjeta {
+  background: white;
+  border-radius: 15px;
+  padding: 15px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.1);
 }
 
-.btn-contacto {
-  background-color: darkseagreen;
-  color: white;
-  padding: 8px 16px;
-  text-decoration: none;
-  border-radius: 25px;
+.tarjeta:hover {
+  transform: translateY(-6px);
 }
 
-.btn-contacto:hover {
-  background-color: #5a8f6d;
+.tarjeta img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 10px;
 }
 
+.tarjeta h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+}
+
+.tarjeta p {
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
+}
+
+/* SOBRE MI */
+.foto-yo {
+  border-radius: 15px;
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Habilidades */
+table td {
+  padding: 8px 10px;
+  font-family: "Quicksand", sans-serif;
+}
+
+/* Footer */
 .footer {
-  margin-top: 4rem;
-  padding: 2rem 0;
   text-align: center;
-}
-
-.link-footer {
-  color: darkseagreen;
-  margin: 0 5px;
-  text-decoration: none;
-}
-
-.link-footer:hover {
-  color: #5e9170;
-}
-
-.categoria {
-  font-size: 0.9rem;
-  color: #7a8f85;
-  margin-bottom: 0.5rem;
+  padding: 15px;
+  background-color: #b19a82;
+  font-size: 13px;
+  margin-top: 40px;
 }
