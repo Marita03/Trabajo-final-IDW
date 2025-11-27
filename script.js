@@ -25,4 +25,4 @@ async function cargarProyectos(url) {
   }
 }
 
-cargarProyectos("RUTA_DE_TU_JSON.json");
+cargarProyectos("https://api.myjson.online/v1/records/72a0a513-be36-4a6c-b360-812151ac4e75");
