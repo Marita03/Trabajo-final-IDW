@@ -41,6 +41,7 @@ body {
 /* INICIO */
 .inicio {
   height: calc(100vh - 90px);
+  /* IMAGEN CAMBIAR */
   background-image: url("https://raw.githubusercontent.com/Marita03/Trabajo-final-IDW/refs/heads/main/img/inicio.webp");
   background-size: cover;
   background-position: center;
