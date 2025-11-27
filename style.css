@@ -1,27 +1,34 @@
 body {
-  font-family: "Quicksand", "Nunito", "Montserrat", sans-serif;
-  background-color: #ded4cd;
-  color: black;
   margin: 0;
-}
-
-/* Barra superior */
-.navbar {
-  background-color: rgba(177, 154, 130, 0.9); /* #b19a82 */
-  padding: 10px 0;
-}
-
-.nav-link {
+  font-family: 'Nunito', 'Quicksand', 'Montserrat', sans-serif;
+  background: white;
   color: black;
-  font-size: 13px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  margin-left: 25px;
-  font-family: "Montserrat", sans-serif;
 }
 
-.nav-link:hover {
-  text-decoration: underline;
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  border-bottom: 1px solid #ded4cd;
+  z-index: 1000;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: black;
+  font-size: 12px;
+  letter-spacing: 2px;
 }
 
 /* INICIO */
@@ -35,91 +42,85 @@ body {
   align-items: center;
 }
 
-.contenido-inicio {
-  background-color: rgba(222, 212, 205, 0.85);
-  padding: 50px 70px;
+.inicio-overlay {
   text-align: center;
-  border-radius: 12px;
-  animation: fade 2s ease;
-}
-
-.contenido-inicio h1 {
-  font-family: "Montserrat", sans-serif;
-  font-size: 38px;
-  margin-bottom: 15px;
-}
-
-.contenido-inicio p {
-  font-family: "Nunito", sans-serif;
-  font-size: 16px;
-  letter-spacing: 1px;
-}
-
-@keyframes fade {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* Secciones */
-.seccion {
-  padding-top: 120px;
-  padding-bottom: 80px;
-  min-height: 80vh;
+  background: rgba(255,255,255,0.8);
+  padding: 40px;
+  animation: fadeIn 2s ease;
 }
 
 /* PROYECTOS */
-.galeria-proyectos {
+#contenedor-proyectos {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 35px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 120px 40px;
 }
 
-.tarjeta {
-  background: white;
-  border-radius: 15px;
-  padding: 15px;
-  transition: transform 0.3s ease;
-  box-shadow: 0 8px 18px rgba(0,0,0,0.1);
+/* SOBRE MÍ */
+.perfil {
+  display: flex;
+  padding: 120px 40px;
+  gap: 40px;
 }
 
-.tarjeta:hover {
-  transform: translateY(-6px);
+.perfil img {
+  width: 300px;
+  border-radius: 6px;
 }
 
-.tarjeta img {
-  width: 100%;
-  border-radius: 12px;
-  margin-bottom: 10px;
+/* Barras */
+.barra {
+  background: #ded4cd;
+  height: 6px;
+  border-radius: 4px;
+}
+.barra div {
+  background: darkseagreen;
+  height: 100%;
 }
 
-.tarjeta h3 {
-  font-family: "Montserrat", sans-serif;
-  font-size: 18px;
-}
-
-.tarjeta p {
-  font-family: "Nunito", sans-serif;
-  font-size: 14px;
-}
-
-/* SOBRE MI */
-.foto-yo {
-  border-radius: 15px;
-  width: 100%;
-  max-width: 400px;
-}
-
-/* Habilidades */
-table td {
-  padding: 8px 10px;
-  font-family: "Quicksand", sans-serif;
-}
-
-/* Footer */
-.footer {
+/* FOOTER */
+footer {
+  padding: 40px;
   text-align: center;
-  padding: 15px;
-  background-color: #b19a82;
-  font-size: 13px;
-  margin-top: 40px;
+  background: #fafafa;
+}
+
+.contacto-links a {
+  color: #b19a82;
+  margin: 10px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* BOTÓN SUBIR */
+#btnSubir {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 15px;
+  background: darkseagreen;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none;
+}
+
+/* Animación */
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .perfil {
+    flex-direction: column;
+  }
 }
