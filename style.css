@@ -3,7 +3,7 @@ body {
   font-family: 'Nunito', 'Quicksand', 'Montserrat', sans-serif;
   background: white;
   color: black;
-  padding-top: 80px; 
+  padding-top: 90px; /* deja espacio para navbar fija */
 }
 
 .navbar {
@@ -17,26 +17,30 @@ body {
   padding: 15px 20px; 
   border-bottom: 1px solid #ded4cd;
   z-index: 1000;
+  box-sizing: border-box;
 }
 
 .navbar ul {
   list-style: none;
   display: flex;
-  gap: 18px;
+  gap: 15px;
   flex-wrap: wrap; 
+  align-items: center;
+  padding: 0;
+  margin: 0;
 }
 
 .navbar a {
   text-decoration: none;
   color: black;
   font-size: 12px;
-  letter-spacing: 2px;
-  white-space: nowrap;
+  letter-spacing: 1px;
+  white-space: nowrap; /* EVITA QUE CONTACTO SE CORTE */
 }
 
 /* INICIO */
 .inicio {
-  height: calc(100vh - 80px);
+  height: calc(100vh - 90px);
   background-image: url("https://raw.githubusercontent.com/Marita03/Trabajo-final-IDW/refs/heads/main/img/inicio.webp");
   background-size: cover;
   background-position: center;
@@ -55,7 +59,7 @@ body {
 /* PROYECTOS */
 #contenedor-proyectos {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 20px;
   padding: 40px;
 }
@@ -92,25 +96,27 @@ body {
   border-radius: 6px;
 }
 
-/* Barras */
+/* Barras habilidades */
 .barra {
   background: #ded4cd;
   height: 6px;
   border-radius: 4px;
+  overflow: hidden;
 }
 
 .barra div {
   background: darkseagreen;
   height: 100%;
+  transition: width 0.6s ease;
 }
 
-/* FOOTER */
+/* FOOTER / CONTACTO */
 footer {
   padding: 60px 40px;
   margin-top: 40px;
   text-align: center;
   background: #fafafa;
-  scroll-margin-top: 100px; /* CLAVE PARA CONTACTO */
+  scroll-margin-top: 120px; /* CLAVE para que no se esconda bajo la navbar */
 }
 
 .contacto-links a {
@@ -141,10 +147,20 @@ footer {
   to {opacity: 1; transform: translateY(0);}
 }
 
-/* Responsive */
+/* VERSION RESPONSIVE */
 @media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 10px;
+  }
+
   .navbar ul {
+    justify-content: center;
     gap: 10px;
+  }
+
+  .navbar a {
     font-size: 11px;
   }
 
