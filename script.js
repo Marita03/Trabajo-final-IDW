@@ -24,4 +24,5 @@ async function cargarProyectos(url) {
   }
 }
 
-cargarProyectos("proyectos.json");
+cargarProyectos("./data/proyectos.json");
+
