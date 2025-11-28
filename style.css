@@ -42,6 +42,20 @@ body {
   cursor: none;
 }
 
+/* Cursor */
+.cursor {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: darkseagreen; /* color base */
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: background-color 0.3s ease, transform 0.05s linear;
+}
+
+
 /* INICIO */
 .inicio {
   height: calc(100vh - 90px);
