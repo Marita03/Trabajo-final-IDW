@@ -41,33 +41,52 @@ body {
 
 /* Cursor */
 
-body { cursor: none; } 
+body {
+  cursor: none; 
+}
 
 .cursor {
-  position: fixed;
-  left: 0;
+  position: fixed;          /* importante */
   top: 0;
+  left: 0;
   width: 18px;
   height: 18px;
   border-radius: 50%;
-  background-color: darkseagreen; 
+  background-color: darkseagreen;
   pointer-events: none;
   transform: translate(-50%, -50%);
   z-index: 9999;
-  transition: background-color 0.25s ease, transform 0.12s ease;
+  transition: transform 0.15s ease, background-color 0.3s ease;
   mix-blend-mode: normal;
-  will-change: left, top, transform;
-  display: block;
 }
 
-/* colores por página  */
-body.home .cursor { background-color: darkseagreen; }
-body.proyectos-page .cursor { background-color: #6b8f71; }
-body.sobre-mi-page .cursor { background-color: #3f5f47; }
-
-
-.cursor--link {
+/* Cursor grande al pasar por links */
+.cursor.cursor--link {
   transform: translate(-50%, -50%) scale(1.8);
+}
+
+/* Colores del cursor según página */
+body.home .cursor { 
+  background-color: darkseagreen; 
+}
+
+body.proyectos-page .cursor { 
+  background-color: #6b8f71; 
+}
+
+body.sobre-mi-page .cursor { 
+  background-color: #3f5f47; 
+}
+
+/* Por si acaso: desactivarlo en celulares */
+@media (max-width: 768px) {
+  body {
+    cursor: auto;
+  }
+
+  .cursor {
+    display: none;
+  }
 }
 
 
