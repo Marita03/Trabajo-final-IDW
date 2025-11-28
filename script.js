@@ -59,22 +59,23 @@ cargarProyectos("./proyectos.json");
 // Cursor
 const cursor = document.querySelector('.cursor');
 
-document.addEventListener('mousemove', e => {
-  cursor.style.left = e.clientX + 'px';
-  cursor.style.top = e.clientY + 'px';
-});
-
-// Cursor
-const links = document.querySelectorAll('a');
-
-links.forEach(link => {
-  link.addEventListener('mouseenter', () => {
-    cursor.style.transform = "translate(-50%, -50%) scale(1.8)";
+if (cursor) {
+  document.addEventListener('mousemove', (e) => {
+    cursor.style.left = e.clientX + 'px';
+    cursor.style.top = e.clientY + 'px';
   });
-  link.addEventListener('mouseleave', () => {
-    cursor.style.transform = "translate(-50%, -50%) scale(1)";
+
+  const links = document.querySelectorAll('a');
+
+  links.forEach(link => {
+    link.addEventListener('mouseenter', () => {
+      cursor.style.transform = "translate(-50%, -50%) scale(1.8)";
+    });
+    link.addEventListener('mouseleave', () => {
+      cursor.style.transform = "translate(-50%, -50%) scale(1)";
+    });
   });
-});
+}
 
 
 
