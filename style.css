@@ -55,6 +55,19 @@ body {
   transition: background-color 0.3s ease, transform 0.05s linear;
 }
 
+.home .cursor {
+  background-color: darkseagreen;
+}
+
+.proyectos-page .cursor {
+  background-color: #6b8f71;
+}
+
+.sobre-mi-page .cursor {
+  background-color: #3f5f47;
+}
+
+
 
 /* INICIO */
 .inicio {
