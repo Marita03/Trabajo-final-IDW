@@ -44,8 +44,8 @@ body {
 
 /* Cursor */
 .cursor {
-  width: 14px;
-  height: 14px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   background-color: darkseagreen; /* color base */
   position: fixed;
