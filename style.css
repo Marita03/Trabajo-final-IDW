@@ -62,22 +62,20 @@ body {
 }
 
 .proyectos h1 {
-  font-size: 18px;
+  font-size: 24px;   
   letter-spacing: 2px;
   margin-top: 40px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
+  text-align: left;
 }
+
 .proyectos-wrapper {
   max-width: 1100px;
   margin: 0 auto;
   padding: 20px;
 }
 
-.proyectos h1 {
-  text-align: left;
-  margin-left: 0;
-  margin-bottom: 40px;
-}
+
 
 /* CONTENEDOR PROYECTOS */
 #contenedor-proyectos {
