@@ -58,12 +58,6 @@ body {
 
 /* SECCIÓN PROYECTOS */
 
-h1 {
-  font-size: 26px;       /* ajustar */
-  letter-spacing: 2px;
-  font-weight: 400;
-  margin-bottom: 40px;
-}
 
 .proyectos {
   padding: 0 40px;
@@ -72,6 +66,10 @@ h1 {
 .proyectos h1 {
   text-align: left;
   margin-top: 40px;
+  font-size: 26px;       /* ajustar */
+  letter-spacing: 2px;
+  font-weight: 400;
+  margin-bottom: 40px;
 }
 
 
