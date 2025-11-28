@@ -117,14 +117,39 @@ footer {
   margin-top: 40px;
   text-align: center;
   background: #fafafa;
-  scroll-margin-top: 120px; /* CLAVE para que no se esconda bajo la navbar */
+  scroll-margin-top: 120px;
+  font-family: 'Nunito', 'Quicksand', 'Montserrat', sans-serif;
 }
 
+/* TÍTULO CONTACTO */
+footer h2 {
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+/* TEXTO DESCRIPTIVO */
+footer p {
+  font-size: 12px;
+  letter-spacing: 1px;
+  margin-bottom: 25px;
+  font-weight: 400;
+}
+
+/* LINKS DE CONTACTO */
 .contacto-links a {
   color: darkseagreen;
-  margin: 10px;
+  margin: 10px 15px;
   text-decoration: none;
-  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-weight: 400;
+  transition: opacity 0.3s ease;
+}
+
+.contacto-links a:hover {
+  opacity: 0.6;
 }
 
 /* BOTÓN SUBIR */
