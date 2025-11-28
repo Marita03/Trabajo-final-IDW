@@ -57,6 +57,14 @@ async function cargarProyectos(url) {
 cargarProyectos("./proyectos.json");
 
 
+const cursor = document.querySelector('.cursor');
+
+document.addEventListener('mousemove', e => {
+  cursor.style.left = e.clientX + 'px';
+  cursor.style.top = e.clientY + 'px';
+});
+
+
 
 // BOTÓN SUBIR
 
