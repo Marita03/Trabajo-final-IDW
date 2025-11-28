@@ -38,33 +38,36 @@ body {
   white-space: nowrap;
 }
 
-body {
-  cursor: none;
-}
 
 /* Cursor */
+
+body { cursor: none; } 
+
 .cursor {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background-color: darkseagreen; /* color base */
   position: fixed;
+  left: 0;
+  top: 0;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: darkseagreen; 
   pointer-events: none;
-  z-index: 9999;
   transform: translate(-50%, -50%);
-  transition: background-color 0.3s ease, transform 0.05s linear;
+  z-index: 9999;
+  transition: background-color 0.25s ease, transform 0.12s ease;
+  mix-blend-mode: normal;
+  will-change: left, top, transform;
+  display: block;
 }
 
-.home .cursor {
-  background-color: darkseagreen;
-}
+/* colores por página  */
+body.home .cursor { background-color: darkseagreen; }
+body.proyectos-page .cursor { background-color: #6b8f71; }
+body.sobre-mi-page .cursor { background-color: #3f5f47; }
 
-.proyectos-page .cursor {
-  background-color: #6b8f71;
-}
 
-.sobre-mi-page .cursor {
-  background-color: #3f5f47;
+.cursor--link {
+  transform: translate(-50%, -50%) scale(1.8);
 }
 
 
