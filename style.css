@@ -38,6 +38,10 @@ body {
   white-space: nowrap;
 }
 
+body {
+  cursor: none;
+}
+
 /* INICIO */
 .inicio {
   height: calc(100vh - 90px);
