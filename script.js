@@ -1,4 +1,46 @@
 
+// Custom cursor (robusto)
+
+document.addEventListener("DOMContentLoaded", () => {
+
+ 
+  if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
+    return;
+  }
+
+  // Crear cursor 
+  let cursor = document.querySelector('.cursor');
+  if (!cursor) {
+    cursor = document.createElement('div');
+    cursor.className = 'cursor';
+    document.body.appendChild(cursor);
+  }
+
+  // Mueve la pelotita con el mouse
+  document.addEventListener('mousemove', (e) => {
+    // posicionar con left/top (no transform para mejor rendimiento)
+    cursor.style.left = e.clientX + 'px';
+    cursor.style.top = e.clientY + 'px';
+  });
+
+  // crecer
+  const links = document.querySelectorAll('a, button, .proyecto-card');
+  links.forEach(link => {
+    link.addEventListener('mouseenter', () => {
+      cursor.classList.add('cursor--link');
+    });
+    link.addEventListener('mouseleave', () => {
+      cursor.classList.remove('cursor--link');
+    });
+  });
+
+
+
+  console.log("Cursor personalizado inicializado (si lo ves, OK). Body classes:", document.body.className);
+});
+
+
+
 // HABILIDADES
 const habilidades = [
   { programa: "Illustrator", valor: 90 },
